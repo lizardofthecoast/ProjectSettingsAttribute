@@ -1,0 +1,18 @@
+{
+    "name": "LizardOfTheCoast.ProjectSettingsAttribute.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:50e6fcfaadce149a99de07b6c58125df"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

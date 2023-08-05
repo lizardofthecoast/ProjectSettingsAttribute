@@ -1,0 +1,18 @@
+{
+    "name": "com.lizardofthecoast.projectsettingsattribute",
+    "version": "0.0.1",
+    "displayName": "Project Settings Attribute",
+    "description": "Make your ScriptableObjects project settings",
+    "unity": "2021.3",
+    "dependencies": {},
+    "keywords": [
+        "script",
+        "project",
+        "settings"
+    ],
+    "author": {
+        "name": "Lizard of the Coast",
+        "email": "lizardofthecoa1@gmail.com",
+        "url": "https://twitter.com/lizardofthecoa1"
+    }
+}
