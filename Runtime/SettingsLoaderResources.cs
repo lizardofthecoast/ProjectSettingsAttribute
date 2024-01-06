@@ -15,14 +15,16 @@ namespace LizardOfTheCoast.ProjectSettings
             {
                 var projectSettingsAttribute =
                     settingsType.GetCustomAttributes<ProjectSettingsAttribute>().First();
-                var settings = SettingsLoader.LoadSettings(projectSettingsAttribute.FilePath);
-                if (settings == null) continue;
+
+                var projectSettingsPath = projectSettingsAttribute.FilePath;
+                if (!File.Exists(projectSettingsPath))
+                    continue;
 
                 var resourcesPath = $"Assets/Settings/Resources/{projectSettingsAttribute.FilePath}.asset";
-                Directory.CreateDirectory(Path.GetDirectoryName(resourcesPath));
-                AssetDatabase.DeleteAsset(resourcesPath);
-                AssetDatabase.CreateAsset(settings, resourcesPath);
+                File.Copy(projectSettingsPath, resourcesPath, overwrite: true);
             }
+
+            AssetDatabase.Refresh();
         }
 
         [MenuItem("Assets/ProjectSettings/DestroyResources")]
